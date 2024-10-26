@@ -1,0 +1,154 @@
+* {
+  box-sizing: border-box;
+  padding: 0px;
+  font-family: "Inter", "Roboto", "Open Sans", sans-serif;
+}
+.SignUp-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url("https://media.istockphoto.com/id/481746542/photo/seamless-high-detiled-very-light-handmade-paper-with-visible-structure.jpg?s=612x612&w=0&k=20&c=VMeXTU1vLEb43YJgoi_9RRHOwnYQIXfF8D9n_FH5OcI=");
+}
+.heading {
+  text-align: center;
+  font-weight: 600;
+}
+.SignUp-form {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  padding: 40px;
+  /* box-shadow: 1px 1px 9px 1px rgba(201, 201, 201, 0.75); */
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 24px 48px;
+  border: 1px solid transparent;
+  border-radius: 15px;
+  background-color: white;
+}
+.label-section {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+.label-section label {
+  margin-bottom: 5px;
+  font-weight: 500;
+  font-size: 14px;
+}
+.label-section input {
+  height: 40px;
+  padding-left: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  color: rgb(30, 22, 22);
+  border-radius: 6px;
+  outline: none;
+  border: 1px solid rgb(201, 201, 201);
+  transition: border-color 0.4s ease, border-width 0.4s ease; 
+}
+.label-section input:focus {
+  border: 2px solid rgb(100, 161, 228);
+}
+
+@media screen and (max-width: 768px) {
+  .heading {
+    font-size: 22px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .heading {
+    font-size: 30px;
+  }
+}
+
+.mandatory {
+  color: red;
+  cursor: pointer;
+  position: relative;
+}
+
+.popup {
+  opacity: 0;
+  visibility: hidden;
+  background-color: #f9f9f9;
+  color: rgb(15, 14, 14);
+  padding: 9px;
+  border: 1px solid black;
+  border-radius: 4px;
+  position: absolute;
+  font-weight: 300;
+  left: 0;
+  z-index: 1;
+  font-size: 12px;
+  width: 200px;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.mandatory:hover .popup,
+.mandatory:focus-within .popup {
+  opacity: 1;
+  visibility: visible;
+}
+
+
+input {
+  margin-bottom: 10px;
+}
+
+.error-mssg {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
+}
+.text {
+  color: rgba(0, 0, 0, 0.65);
+  line-height: 1.25;
+  font-size: 14px;
+  margin-top: 30px;
+}
+.text a {
+  color: #007bff;
+  text-decoration: none;
+}
+.text a:hover {
+  text-decoration: underline;
+}
+.text a:active {
+  color: #0056b3;
+  border: 2px solid #3890ee;
+}
+.button {
+  background-color: #161eef;
+  border: 0px;
+  border-radius: 6px;
+  color: white;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition-duration: 100ms;
+  outline: none;
+  letter-spacing: 0.5px;
+}
+.button:hover {
+  background-color: #3f41ac;
+}
+
+
+.loading-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.8); 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000; 
+  backdrop-filter: blur(5px); 
+}
+
+.blur-content {
+  filter: blur(5px);
+}
